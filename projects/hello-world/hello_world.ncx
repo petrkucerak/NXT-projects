@@ -1,0 +1,13 @@
+#define PIXELS_PER_CHAR 6
+task main () {
+    string line1 = "Hello";
+
+    ClearScreen();
+    TextOut(0, LCD_LINE1, line1);
+    TextOut(strlen(line1) * PIXELS_PER_CHAR, LCD_LINE2, "World");
+
+    LineOut(0, LCD_LINE2-2, 100, LCD_LINE2-2);
+    
+    NumOut(0, LCD_LINE8, 8);
+    Wait(3000);
+}
